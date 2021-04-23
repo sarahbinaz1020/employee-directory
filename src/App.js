@@ -50,6 +50,8 @@ class App extends React.Component {
     const { employees } = this.state;
     return (
       <>
+        <Main />
+        <Search />
         <Users
           employees = { employees }
         />
