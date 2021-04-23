@@ -1,13 +1,22 @@
 import React from "react";
 
 // props = { employees: [{ name: abc, phone: 1234 }, { name: def, phone: 567}] }
+function formatDate(date) {
+    const dateArray = date.split("-");
+    const month = dateArray[1];
+    const dayArray = dateArray[2].split("T");
+    const day = dayArray[0];
+    const formattedDate = [month, day].join("-");
+    return formattedDate;
+}
+
 
 function Users(props) {
   return (
     <>
       <table>
         <thead>
-          <th>Image</th>
+          <th>Photo</th>
           <th>Name</th>
           <th>Phone</th>
           <th>Email</th>
@@ -26,7 +35,7 @@ function Users(props) {
                 <td>{employee.name}</td>
                 <td>{employee.phone}</td>
                 <td>{employee.email}</td>
-                <td>{employee.dob}</td>
+                <td>{formatDate (employee.dob)}</td>
               </tr>
             ))
           )}

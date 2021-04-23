@@ -2,21 +2,15 @@ import React from 'react'
 
 function Search() {
     return (
-       <div className="row g-3">
-           <div className="col-md">
+        
+       <div className="mb-3 w-50 p-3 min-vw-50">
+           <label for="searchBarInput" className="form-label"></label>
+           <input type="text" className="form-control" id="searchBarInput" placeholder="Search"></input>
+         </div>
 
-       <div class="form-floating">
-  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-  <label for="floatingTextarea">Search</label>
-</div>
-
-           </div>
-
-
-       </div> 
 
            
     )
-}
+};
 
-export default Search
+export default Search;
