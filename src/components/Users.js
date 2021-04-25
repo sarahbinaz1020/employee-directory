@@ -14,21 +14,21 @@ function formatDate(date) {
 function Users(props) {
   return (
     <>
-      <table>
-        <thead>
-          <th>Photo</th>
-          <th>Name</th>
-          <th>Phone</th>
-          <th>Email</th>
-          <th>DOB</th>
+      <table className="table table-striped align-middle">
+        <thead >
+          <th className="h3">Photo</th>
+          <th className="h3">Name</th>
+          <th className="h3">Phone</th>
+          <th className="h3">Email</th>
+          <th className="h3">DOB</th>
         </thead>
-        <tbody>
+        <tbody >
           {" "}
           {props.employees.length === 0 ? (
             <h2>No Employees!</h2>
           ) : (
             props.employees.map((employee) => (
-              <tr>
+              <tr >
                 <td>
                   <img src={employee.image} alt={employee.name} />
                 </td>
