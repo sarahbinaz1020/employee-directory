@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import SearchForm from "./SearchForm";
 // import Users from "./Users";
 
 class Search extends Component {
@@ -34,12 +35,13 @@ class Search extends Component {
     };
     render() {
       return (
-          <>
-        <div className="searchbox">
-        <input type="search" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
-        {/* <span class="input-group-text" id="basic-addon2">@example.com</span> */}
+    
+        <div>
+        <SearchForm
+        handleFormSubmit={this.handleFormSubmit}
+        handleInputChange={this.handleInputChange}
+        />
       </div>
-      </>
       );
     }
   }
