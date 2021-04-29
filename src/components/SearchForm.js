@@ -1,24 +1,16 @@
 import React from "react";
+import InputGroup from "react-bootstrap/InputGroup";
+import Form from "react-bootstrap/Form";
 
-function SearchForm ( { handleFormSubmit, handleInputChange }) {
-    return (
-        <div className="searchbox container">
-        <input type="text"
-        name="search" 
-        value
-        className="form-control" 
-        placeholder="Search" 
-        aria-label="Recipient's username" 
-        aria-describedby="basic-addon2"
-        onChange={handleInputChange}
-        />
-        <div>
-        <button onClick={handleFormSubmit} className="btn btn-secondary">Search</button>
 
-        </div>
-        
-        </div>
-    )
+function SearchForm ({ handleInputChange }) {
+  return (<InputGroup className="mb-3">
+  <Form.Control
+    placeholder="Employee's Name"
+    aria-label="Recipient's username"
+    aria-describedby="basic-addon2"
+    onChange={handleInputChange}
+  />
+</InputGroup>)
 }
-
 export default SearchForm;

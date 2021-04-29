@@ -11,7 +11,7 @@ function formatDate(date) {
 }
 
 
-function Users(props) {
+function Users({ employees }) {
   return (
     <>
       <table className="table table-striped align-middle">
@@ -23,12 +23,8 @@ function Users(props) {
           <th className="h3">DOB</th>
         </thead>
         <tbody >
-          {" "}
-          {props.employees.length === 0 ? (
-            <h2>No Employees!</h2>
-          ) : (
-            props.employees.map((employee) => (
-              <tr >
+            {employees.map(employee => ( 
+             <tr >
                 <td>
                   <img src={employee.image} alt={employee.name} />
                 </td>
@@ -37,9 +33,7 @@ function Users(props) {
                 <td>{employee.email}</td>
                 <td>{formatDate (employee.dob)}</td>
               </tr>
-            ))
-          )}
-          ;
+            ))}
         </tbody>
       </table>
     </>
