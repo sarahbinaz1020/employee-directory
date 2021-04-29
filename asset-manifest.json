@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sarahbinaz1020/employee-directorystatic/css/main.50cd0536.chunk.css",
+    "main.js": "/sarahbinaz1020/employee-directorystatic/js/main.2523916b.chunk.js",
+    "main.js.map": "/sarahbinaz1020/employee-directorystatic/js/main.2523916b.chunk.js.map",
+    "runtime-main.js": "/sarahbinaz1020/employee-directorystatic/js/runtime-main.0239351f.js",
+    "runtime-main.js.map": "/sarahbinaz1020/employee-directorystatic/js/runtime-main.0239351f.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/sarahbinaz1020/employee-directorystatic/css/2.4c97ca4f.chunk.css",
+    "static/js/2.d6969b3e.chunk.js": "/sarahbinaz1020/employee-directorystatic/js/2.d6969b3e.chunk.js",
+    "static/js/2.d6969b3e.chunk.js.map": "/sarahbinaz1020/employee-directorystatic/js/2.d6969b3e.chunk.js.map",
+    "static/js/3.17d77c8d.chunk.js": "/sarahbinaz1020/employee-directorystatic/js/3.17d77c8d.chunk.js",
+    "static/js/3.17d77c8d.chunk.js.map": "/sarahbinaz1020/employee-directorystatic/js/3.17d77c8d.chunk.js.map",
+    "index.html": "/sarahbinaz1020/employee-directoryindex.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/sarahbinaz1020/employee-directorystatic/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.50cd0536.chunk.css.map": "/sarahbinaz1020/employee-directorystatic/css/main.50cd0536.chunk.css.map",
+    "static/js/2.d6969b3e.chunk.js.LICENSE.txt": "/sarahbinaz1020/employee-directorystatic/js/2.d6969b3e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0239351f.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.d6969b3e.chunk.js",
+    "static/css/main.50cd0536.chunk.css",
+    "static/js/main.2523916b.chunk.js"
+  ]
+}
