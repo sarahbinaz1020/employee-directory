@@ -80,7 +80,7 @@ class App extends React.Component {
       <>
         <Main>
         <SearchForm handleInputChange={this.handleInputChange}/>
-        <button onClick={this.sortEmployees}>
+        <button type="button" className="btn btn-primary text-center mb-2" data-bs-toggle="button" autocomplete="off" onClick={this.sortEmployees}>
           Sort A-Z by Last Name
         </button>
         <div>
