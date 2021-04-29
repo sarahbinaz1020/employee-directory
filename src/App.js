@@ -80,9 +80,11 @@ class App extends React.Component {
       <>
         <Main>
         <SearchForm handleInputChange={this.handleInputChange}/>
+        <div className="d-grid gap-2 d-md-flex justify-content-md-center">
         <button type="button" className="btn btn-primary text-center mb-2" data-bs-toggle="button" autocomplete="off" onClick={this.sortEmployees}>
           Sort A-Z by Last Name
         </button>
+        </div>
         <div>
           {employees.length === 0 ? (
             <h2>No Employees!</h2>
