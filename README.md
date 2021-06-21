@@ -1,4 +1,4 @@
-# employee-directory
+# Employee Directory
 
 
 ## Description
@@ -14,6 +14,17 @@ The user should be able to:
   * Sort the table by at least one category.
 
   * Filter the users by at least one property.
+
+This application is deployed on GitHub pages: https://sarahbinaz1020.github.io/employee-directory/
+
+
+## How to Use
+
+1. Obtain the code either by:
+  * Fork the repository
+  * Clone the repo with ```git clone https://github.com/sarahbinaz1020/employee-directory.git```
+
+2. Open the integrated terminal within the code, and type ```npm start``` to have application open in local host.
 
 
 
