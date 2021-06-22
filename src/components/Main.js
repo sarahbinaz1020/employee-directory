@@ -1,24 +1,17 @@
 import React from "react";
-// import Search from "./Search";
-// import Users from "./Users";
+import "../index.css"
 
-
-function Main({children}) {
-    return (
-        <>
-        <div className="jumbotron bg-info  text-center">
-        <h1>Employee Directory</h1>
-        <p className="text-center">
-          Search below for employees in the company
-        </p>
+function Main({ children }) {
+  return (
+    <>
+      <div className="header pt-2 pb-2 text-center">
+        <h1 className="title">Employee Directory</h1>
+        <p className="subtitle">Search below for employees in the company</p>
       </div>
       {children}
-      <footer>
-          Est. 2021
-      </footer>
-      </>
-    )
+      <footer>Est. 2021</footer>
+    </>
+  );
 }
 
-export default Main
-
+export default Main;

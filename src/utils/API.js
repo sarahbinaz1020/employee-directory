@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const API =  {
+const API = {
   // Gets all users
-  getUsers: function() {
+  getUsers: function () {
     return axios.get("https://randomuser.me/api/?results=200&nat=us");
-  }
+  },
 };
 
-export default API
+export default API;
