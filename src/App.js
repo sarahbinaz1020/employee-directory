@@ -6,6 +6,7 @@ import Users from "./components/Users";
 import API from "./utils/API";
 import "../src/App.css";
 
+
 class App extends React.Component {
   state = {
     employees: [],
@@ -78,6 +79,7 @@ class App extends React.Component {
     return (
       <>
         <Main>
+     
           <SearchForm handleInputChange={this.handleInputChange} />
           <div className="d-grid gap-2 d-md-flex justify-content-md-center">
             <button
@@ -85,7 +87,7 @@ class App extends React.Component {
               className="btn btn-primary text-center mb-2"
               id="sortlastbtn"
               data-bs-toggle="button"
-              autocomplete="off"
+              autoComplete="off"
               onClick={this.sortEmployees}
             >
               Sort A-Z by Last Name

@@ -1,6 +1,7 @@
 import React from "react";
 
 // props = { employees: [{ name: abc, phone: 1234 }, { name: def, phone: 567}] }
+// convert DOB to show only month and day
 function formatDate(date) {
   const dateArray = date.split("-");
   const month = dateArray[1];
@@ -10,6 +11,7 @@ function formatDate(date) {
   return formattedDate;
 }
 
+// employee table
 function Users({ employees }) {
   return (
     <>

@@ -1,10 +1,11 @@
 import React from "react";
-import InputGroup from "react-bootstrap/InputGroup";
-import Form from "react-bootstrap/Form";
+import { Form, InputGroup } from "react-bootstrap";
 
+// search bar
 function SearchForm({ handleInputChange }) {
   return (
-    <InputGroup className="container mb-3">
+    <InputGroup className="container mt-3 mb-3">
+      
       <Form.Control
         placeholder="Employee's Name"
         aria-label="Recipient's username"
