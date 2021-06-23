@@ -6,7 +6,6 @@ import Users from "./components/Users";
 import API from "./utils/API";
 import "../src/App.css";
 
-
 class App extends React.Component {
   state = {
     employees: [],
@@ -78,8 +77,9 @@ class App extends React.Component {
 
     return (
       <>
+        {/* header add to page */}
         <Main>
-     
+          {/* search bar and filter options */}
           <SearchForm handleInputChange={this.handleInputChange} />
           <div className="d-grid gap-2 d-md-flex justify-content-md-center">
             <button
@@ -97,6 +97,7 @@ class App extends React.Component {
             {employees.length === 0 ? (
               <h2>No Employees!</h2>
             ) : (
+              // user table
               <Users employees={filteredEmployees} />
             )}{" "}
           </div>

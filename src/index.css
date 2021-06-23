@@ -1,14 +1,11 @@
 /* Styling for the header section */
-.header {
+.header,
+.footer {
   background-color: rgb(19, 81, 133);
   font-family: 'Karla', sans-serif;
   color: white;
 }
 
 .title {
-  font-size: 65px;
-}
-
-.subtitle {
-  font-size: 25px;
+  font-size: 40px;
 }

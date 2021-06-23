@@ -15,17 +15,17 @@ function formatDate(date) {
 function Users({ employees }) {
   return (
     <>
-      <table className="table table-striped align-middle">
+      <table className="ml-4 mr-4 border table table-striped align-items-middle">
         <thead>
-          <th className="h3">Photo</th>
-          <th className="h3">Name</th>
-          <th className="h3">Phone</th>
-          <th className="h3">Email</th>
-          <th className="h3">DOB</th>
+          <th className="h4">Photo</th>
+          <th className="h4">Name</th>
+          <th className="h4">Phone</th>
+          <th className="h4">Email</th>
+          <th className="h4">DOB</th>
         </thead>
-        <tbody>
+        <tbody >
           {employees.map((employee) => (
-            <tr>
+            <tr className="content-center">
               <td>
                 <img src={employee.image} alt={employee.name} />
               </td>
