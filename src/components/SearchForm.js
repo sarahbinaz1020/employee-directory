@@ -7,7 +7,7 @@ function SearchForm({ handleInputChange }) {
     <InputGroup className="container mt-3 mb-3">
       
       <Form.Control
-        placeholder="Employee's Name"
+        placeholder="Search by name..."
         aria-label="Recipient's username"
         aria-describedby="basic-addon2"
         onChange={handleInputChange}

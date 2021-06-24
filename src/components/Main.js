@@ -2,6 +2,7 @@ import React from "react";
 import "../index.css";
 import { Row, Figure, Col } from "react-bootstrap";
 
+
 // header for page
 function Main({ children }) {
   return (
@@ -18,9 +19,7 @@ function Main({ children }) {
               />
             </Figure>
           </Col>
-          <Col sm={10}>
-            <h1 className="title fw-bolder">Employee Directory</h1>
-          </Col>
+          
         </Row>
       </div>
 

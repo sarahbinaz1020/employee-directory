@@ -1,3 +1,12 @@
 #sortlastbtn {
   background-color: rgb(19, 81, 133);
 }
+
+.title {
+  font-size: 25px;
+}
+
+.employeeIcon {
+  font-size: 35px;
+  float: right;
+}

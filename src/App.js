@@ -5,6 +5,8 @@ import SearchForm from "./components/SearchForm";
 import Users from "./components/Users";
 import API from "./utils/API";
 import "../src/App.css";
+import { Row, Col } from "react-bootstrap";
+import { BsPeople } from "react-icons/bs";
 
 class App extends React.Component {
   state = {
@@ -77,34 +79,49 @@ class App extends React.Component {
 
     return (
       <>
-        {/* header add to page */}
+        {/* generic logo and company placeholder company links*/}
         <Main>
-          {/* search bar and filter button */}
-          <SearchForm handleInputChange={this.handleInputChange} />
-          <div
-            key="button"
-            className="d-grid gap-2 d-md-flex justify-content-md-center"
-          >
-            <button
-              type="button"
-              className="btn btn-primary text-center mb-2"
-              id="sortlastbtn"
-              data-bs-toggle="button"
-              autoComplete="off"
-              onClick={this.sortEmployees}
-            >
-              Sort A-Z by Last Name
-            </button>
-          </div>
-          {/* catch for errors */}
-          <div>
-            {employees.length === 0 ? (
-              <h2>No Employees!</h2>
-            ) : (
-              // user table
-              <Users employees={filteredEmployees} />
-            )}{" "}
-          </div>
+          <Row className="mt-3">
+            <Col sm={1}>
+              <BsPeople className="employeeIcon"></BsPeople>
+            </Col>
+            <Col sm={3}>
+              <h1 className="title fw-bolder">Employee Directory</h1>
+            </Col>
+            <Col sm={8}></Col>
+          </Row>
+          <Row>
+            <Col sm={2} fluid>
+              {/* search bar and filter button */}
+              <SearchForm handleInputChange={this.handleInputChange} />
+              <div
+                key="button"
+                className="d-grid gap-2 d-md-flex justify-content-md-center"
+              >
+                <button
+                  type="button"
+                  className="btn btn-primary text-center mb-2"
+                  id="sortlastbtn"
+                  data-bs-toggle="button"
+                  autoComplete="off"
+                  onClick={this.sortEmployees}
+                >
+                  Sort A-Z by Last Name
+                </button>
+              </div>
+            </Col>
+            <Col sm={9} fluid>
+              {/* catch for errors */}
+              <div>
+                {employees.length === 0 ? (
+                  <h2>No Employees!</h2>
+                ) : (
+                  // user table
+                  <Users employees={filteredEmployees} />
+                )}{" "}
+              </div>
+            </Col>
+          </Row>
         </Main>
       </>
     );
