@@ -8,7 +8,7 @@ function Main({ children }) {
     <>
       <div className="header pt-2 pb-2">
         <Row className="align-items-center">
-          <Col sm={2} fluid>
+          <Col sm={2}>
             <Figure className="ml-4 text-center">
               <Figure.Image
                 width={141}
@@ -18,7 +18,7 @@ function Main({ children }) {
               />
             </Figure>
           </Col>
-          <Col sm={10} fluid>
+          <Col sm={10}>
             <h1 className="title fw-bolder">Employee Directory</h1>
           </Col>
         </Row>

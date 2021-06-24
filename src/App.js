@@ -79,9 +79,12 @@ class App extends React.Component {
       <>
         {/* header add to page */}
         <Main>
-          {/* search bar and filter options */}
+          {/* search bar and filter button */}
           <SearchForm handleInputChange={this.handleInputChange} />
-          <div className="d-grid gap-2 d-md-flex justify-content-md-center">
+          <div
+            key="button"
+            className="d-grid gap-2 d-md-flex justify-content-md-center"
+          >
             <button
               type="button"
               className="btn btn-primary text-center mb-2"
@@ -93,6 +96,7 @@ class App extends React.Component {
               Sort A-Z by Last Name
             </button>
           </div>
+          {/* catch for errors */}
           <div>
             {employees.length === 0 ? (
               <h2>No Employees!</h2>
