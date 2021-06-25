@@ -5,7 +5,7 @@ import SearchForm from "./components/SearchForm";
 import Users from "./components/Users";
 import API from "./utils/API";
 import "../src/App.css";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Dropdown } from "react-bootstrap";
 import { BsPeople } from "react-icons/bs";
 
 class App extends React.Component {
@@ -18,7 +18,7 @@ class App extends React.Component {
   componentDidMount() {
     this.getEmployees();
   }
-// pull data from API database
+  // pull data from API database
   getEmployees = async () => {
     const { data } = await API.getUsers();
     // name
@@ -56,18 +56,20 @@ class App extends React.Component {
 
   // function to sort employees Z-A
   sortEmployeesBackwards = (a, b) => {
-    const sortedEmployeesBackwards = this.state.filteredEmployees.sort((a, b) => {
-      var nameA = a.name.split(" ")[1].toUpperCase();
-      var nameB = b.name.split(" ")[1].toUpperCase();
+    const sortedEmployeesBackwards = this.state.filteredEmployees.sort(
+      (a, b) => {
+        var nameA = a.name.split(" ")[1].toUpperCase();
+        var nameB = b.name.split(" ")[1].toUpperCase();
 
-      if (nameB < nameA) {
-        return -1;
+        if (nameB < nameA) {
+          return -1;
+        }
+        if (nameB > nameA) {
+          return 1;
+        }
+        return 0;
       }
-      if (nameB > nameA) {
-        return 1;
-      }
-      return 0;
-    });
+    );
     // this.setState ({ employees });
     this.setState({ filteredEmployees: sortedEmployeesBackwards });
   };
@@ -139,6 +141,29 @@ class App extends React.Component {
                   Z-A
                 </button>
               </div>
+              <Row className="mt-4 justify-content-md-center">
+                <p className="text-center">Filter by DOB-Month</p>
+                <Dropdown className="d-inline mx-2 justify-content-md-center">
+                  <Dropdown.Toggle id="dropdown-autoclose-true">
+                    Month
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#">January</Dropdown.Item>
+                    <Dropdown.Item href="#">February</Dropdown.Item>
+                    <Dropdown.Item href="#">March</Dropdown.Item>
+                    <Dropdown.Item href="#">April</Dropdown.Item>
+                    <Dropdown.Item href="#">May</Dropdown.Item>
+                    <Dropdown.Item href="#">June</Dropdown.Item>
+                    <Dropdown.Item href="#">July</Dropdown.Item>
+                    <Dropdown.Item href="#">August</Dropdown.Item>
+                    <Dropdown.Item href="#">September</Dropdown.Item>
+                    <Dropdown.Item href="#">October</Dropdown.Item>
+                    <Dropdown.Item href="#">November</Dropdown.Item>
+                    <Dropdown.Item href="#">December</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </Row>
             </Col>
             <Col sm={10} fluid>
               {/* catch for errors */}
@@ -152,7 +177,9 @@ class App extends React.Component {
               </div>
             </Col>
           </Row>
-          <footer className="footer text-center position-fixed-bottom">Est. 2021</footer>
+          <footer className="footer text-center position-fixed-bottom">
+            Est. 2021
+          </footer>
         </Main>
       </>
     );
