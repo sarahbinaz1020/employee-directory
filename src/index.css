@@ -1,3 +1,4 @@
+
 /* Styling for the header section */
 .header,
 .footer {
@@ -6,4 +7,8 @@
   color: white;
 }
 
-
+/* Styling for table title and table */
+.title,
+.tableText {
+  font-family: 'Karla', sans-serif;
+}

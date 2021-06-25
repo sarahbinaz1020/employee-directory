@@ -18,7 +18,7 @@ class App extends React.Component {
   componentDidMount() {
     this.getEmployees();
   }
-
+// pull data from API database
   getEmployees = async () => {
     const { data } = await API.getUsers();
     // name
@@ -36,6 +36,7 @@ class App extends React.Component {
     this.setState({ employees, filteredEmployees: employees });
   };
 
+  // function to sort employees A-Z
   sortEmployees = (a, b) => {
     const sortedEmployees = this.state.filteredEmployees.sort((a, b) => {
       var nameA = a.name.split(" ")[1].toUpperCase();
@@ -51,6 +52,24 @@ class App extends React.Component {
     });
     // this.setState ({ employees });
     this.setState({ filteredEmployees: sortedEmployees });
+  };
+
+  // function to sort employees Z-A
+  sortEmployeesBackwards = (a, b) => {
+    const sortedEmployeesBackwards = this.state.filteredEmployees.sort((a, b) => {
+      var nameA = a.name.split(" ")[1].toUpperCase();
+      var nameB = b.name.split(" ")[1].toUpperCase();
+
+      if (nameB < nameA) {
+        return -1;
+      }
+      if (nameB > nameA) {
+        return 1;
+      }
+      return 0;
+    });
+    // this.setState ({ employees });
+    this.setState({ filteredEmployees: sortedEmployeesBackwards });
   };
 
   filterEmployees = (employee) => {
@@ -82,8 +101,8 @@ class App extends React.Component {
         {/* generic logo and company placeholder company links*/}
         <Main>
           <Row className="mt-3">
-            <Col sm={1}>
-              <BsPeople className="employeeIcon"></BsPeople>
+            <Col sm={2}>
+              <BsPeople className="employeeIcon position-absolute top-50 start-50 translate-middle"></BsPeople>
             </Col>
             <Col sm={3}>
               <h1 className="title fw-bolder">Employee Directory</h1>
@@ -94,6 +113,7 @@ class App extends React.Component {
             <Col sm={2} fluid>
               {/* search bar and filter button */}
               <SearchForm handleInputChange={this.handleInputChange} />
+              <p className="mt-4 text-center">Sort by Last Name</p>
               <div
                 key="button"
                 className="d-grid gap-2 d-md-flex justify-content-md-center"
@@ -106,11 +126,21 @@ class App extends React.Component {
                   autoComplete="off"
                   onClick={this.sortEmployees}
                 >
-                  Sort A-Z by Last Name
+                  A-Z
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-primary text-center mb-2"
+                  id="sortlastbtn"
+                  data-bs-toggle="button"
+                  autoComplete="off"
+                  onClick={this.sortEmployeesBackwards}
+                >
+                  Z-A
                 </button>
               </div>
             </Col>
-            <Col sm={9} fluid>
+            <Col sm={10} fluid>
               {/* catch for errors */}
               <div>
                 {employees.length === 0 ? (
@@ -122,6 +152,7 @@ class App extends React.Component {
               </div>
             </Col>
           </Row>
+          <footer className="footer text-center position-fixed-bottom">Est. 2021</footer>
         </Main>
       </>
     );
