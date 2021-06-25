@@ -141,10 +141,11 @@ class App extends React.Component {
                   Z-A
                 </button>
               </div>
-              <Row className="mt-4 justify-content-md-center">
+              {/* filter button for DOB month -- UNDER CONSTRUCTION */}
+              {/* <Row className="mt-4">
                 <p className="text-center">Filter by DOB-Month</p>
-                <Dropdown className="d-inline mx-2 justify-content-md-center">
-                  <Dropdown.Toggle id="dropdown-autoclose-true">
+                <Dropdown className="ml-5 pr-1 d-inline mx-2 justify-content-md-center" >
+                  <Dropdown.Toggle variant="dark" className="" id="dropdown-autoclose-true">
                     Month
                   </Dropdown.Toggle>
 
@@ -163,7 +164,7 @@ class App extends React.Component {
                     <Dropdown.Item href="#">December</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-              </Row>
+              </Row> */}
             </Col>
             <Col sm={10} fluid>
               {/* catch for errors */}

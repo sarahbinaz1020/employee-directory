@@ -24,9 +24,11 @@ This application is deployed on GitHub pages: https://sarahbinaz1020.github.io/e
   * Fork the repository
   * Clone the repo with ```git clone https://github.com/sarahbinaz1020/employee-directory.git```
 
-2. Open the integrated terminal within the code, and type ```npm start``` to have application open in local host.
+2. Open the integrated terminal within the code, and type ```npm i``` to have all dependies installed. 
 
+3. Type ```npm start``` to have application open in local host.
 
+Please note the navbar created is for aesthetic purposes only and does not link to anything.
 
 ## Questions
 
