@@ -11,14 +11,17 @@ Given a table of random users generated from the [Random User API](https://rando
 
 The user should be able to:
 
-  * Sort the table by at least one category.
+  * Sort the table by ascending or descending order by name.
 
-  * Filter the users by at least one property.
+  * Filter the users by using the search bar.
 
-This application is deployed on GitHub pages: https://sarahbinaz1020.github.io/employee-directory/
+![image of markdown](./public/employee-directory.png)
 
+## Future Development
 
-## How to Use
+* Working on adding a dropdown option to filter by DOB month.
+
+## How to Use 
 
 1. Obtain the code either by:
   * Fork the repository
@@ -29,6 +32,9 @@ This application is deployed on GitHub pages: https://sarahbinaz1020.github.io/e
 3. Type ```npm start``` to have application open in local host.
 
 Please note the navbar created is for aesthetic purposes only and does not link to anything.
+
+## Deployment
+This application is deployed on [GitHub pages](https://sarahbinaz1020.github.io/employee-directory/)
 
 ## Questions
 

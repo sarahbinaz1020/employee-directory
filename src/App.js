@@ -5,7 +5,7 @@ import SearchForm from "./components/SearchForm";
 import Users from "./components/Users";
 import API from "./utils/API";
 import "../src/App.css";
-import { Row, Col, Dropdown } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { BsPeople } from "react-icons/bs";
 
 class App extends React.Component {
